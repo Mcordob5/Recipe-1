@@ -1,4 +1,48 @@
 html {
     background-color: rgba(122, 191, 191, .5);
-    width: 428px;
+    
+}
+body{
+    background-color: #f2f2f2;
+    width: 414px;
+}
+
+h1{
+    font-size: 40px;
+    font-family: "Bebas Neue";
+}
+
+h2{
+    font-size: 30px;
+    font-family: "Bebas Neue";
+}
+
+h3{
+    font-size: 25px;
+    font-family: "Bebas Neue";
+}
+
+nav a{
+    font-size: 20px;
+    font-family: "Bebas Neue";
+}
+
+nav span{
+    font-family: "Bebas Neue";
+    font-size: 20px;
+}
+
+menu li{
+    font-family: "Bebas Neue";
+    font-size: 20px;
+}
+
+#social li{
+    font-size: 20px;
+    font-family: "Bebas Neue";
+}
+
+footer{
+    font-size: 20px;
+    font-family: "Bebas Neue";
 }
