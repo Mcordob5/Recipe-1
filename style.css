@@ -181,6 +181,18 @@ dd{
     width: 100%;
     max-width: 414px;
     /* Adjusted to fit within 414px */
+    position: fixed;
+    /* Set position to fixed */
+    top: 0;
+    /* Position at the top */
+    background-color: white;
+    /* Adjust the background color */
+    z-index: 1000;
+    /* Make sure it's above other content */
+    padding: 10px;
+    /* Add some padding for better presentation */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for better visibility */
 }
 
 #topnav h2 {
@@ -294,4 +306,190 @@ footer img{
 
 footer{
     text-align: center;
+}
+@media screen and (min-width: 768px) {
+    html {
+        width: 768px;
+    }
+
+    body {
+        width: 768px;
+    }
+
+    #topnav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 414px;
+        /* Adjusted to fit within 414px */
+    }
+
+    #topnav h2 {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    #topnav .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #topnav nav.menu ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #topnav nav.menu ul li {
+        margin-right: 10px;
+    }
+
+    #topnav nav.menu ul li:last-child {
+        margin-right: 0;
+    }
+
+    #topnav nav.menu ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    #topnav nav.menu ul li a img {
+        width: 60px;
+        margin-top: 5px;
+    }
+
+    #topnav .search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #topnav .search h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    #topnav .search input[type="search"] {
+        width: 70%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+    }
+
+    #topnav .search button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        margin-top: 10px;
+    }
+
+    #topnav .search button svg {
+        stroke: #EB5428;
+    }
+}
+@media screen and (min-width: 1280px){
+    html{
+        width: 1280px;
+    }
+    body{
+        width: 1280px;
+    }
+    #topnav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 414px;
+            /* Adjusted to fit within 414px */
+        }
+    
+        #topnav h2 {
+            text-align: center;
+            margin: 0;
+            width: 100%;
+        }
+    
+        #topnav .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    
+        #topnav nav.menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        #topnav nav.menu ul li {
+            margin-right: 10px;
+        }
+    
+        #topnav nav.menu ul li:last-child {
+            margin-right: 0;
+        }
+    
+        #topnav nav.menu ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+    
+        #topnav nav.menu ul li a img {
+            width: 60px;
+            margin-top: 5px;
+        }
+    
+        #topnav .search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    
+        #topnav .search h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+    
+        #topnav .search input[type="search"] {
+            width: 70%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    
+        #topnav .search button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-top: 10px;
+        }
+    
+        #topnav .search button svg {
+            stroke: #EB5428;
+        }
 }
