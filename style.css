@@ -5,6 +5,8 @@ html {
 body{
     background-color: #f2f2f2;
     width: 414px;
+    display: grid;
+    grid-template-areas:"header header header" "main main main" "aside aside aside" "topnav topnav topnav";
 }
 
 h1{
@@ -80,6 +82,7 @@ dt{
 header{
     text-align: center;
     padding-top: 10px;
+    grid-area: header;
 }
 
 menu {
@@ -105,6 +108,10 @@ menu li a svg {
     top: -45px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+main{
+    grid-area: main;
 }
 
 main h2{
@@ -133,6 +140,7 @@ aside {
     margin-top: 20px;
     width: 100%;
     max-width: 414px;
+    grid-area: aside;
 }
 
 aside h2 {
@@ -180,19 +188,13 @@ dd{
     margin-top: 20px;
     width: 100%;
     max-width: 414px;
-    /* Adjusted to fit within 414px */
     position: fixed;
-    /* Set position to fixed */
     top: 0;
-    /* Position at the top */
     background-color: white;
-    /* Adjust the background color */
     z-index: 1000;
-    /* Make sure it's above other content */
     padding: 10px;
-    /* Add some padding for better presentation */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    /* Add shadow for better visibility */
+    grid-area: topnav;
 }
 
 #topnav h2 {
@@ -267,6 +269,79 @@ dd{
 
 #topnav .search button svg {
     stroke: #EB5428;
+} 
+
+nav {
+    grid-area: topnav;
+    min-width: 414px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px #bbb;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+nav ul {
+    grid-area: topnav;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    max-height: 0;
+}
+
+nav li img {
+    display: none;
+}
+
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    bottom: 10px;
+    left: 40px;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+nav span {
+    display: grid;
+    position: relative;
+}
+
+nav label svg {
+    display: grid;
+}
+
+label span:before,
+label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+nav input {
+    display: none;
+}
+
+nav input:checked~ul {
+    max-height: 550px;
 }
 
 .social-media {
@@ -316,6 +391,11 @@ footer{
         width: 768px;
     }
 
+    main img{
+        height: auto;
+        width: 768px;
+    }
+
     #topnav {
         display: flex;
         flex-direction: column;
@@ -323,8 +403,7 @@ footer{
         justify-content: center;
         margin-top: 20px;
         width: 100%;
-        max-width: 414px;
-        /* Adjusted to fit within 414px */
+        max-width: 768px;
     }
 
     #topnav h2 {
@@ -401,12 +480,18 @@ footer{
         stroke: #EB5428;
     }
 }
+
 @media screen and (min-width: 1280px){
     html{
         width: 1280px;
     }
     body{
         width: 1280px;
+    }
+
+    main img{
+        width: 1280px;
+        height: auto;
     }
     #topnav {
             display: flex;
@@ -415,8 +500,7 @@ footer{
             justify-content: center;
             margin-top: 20px;
             width: 100%;
-            max-width: 414px;
-            /* Adjusted to fit within 414px */
+            max-width: 1280px;
         }
     
         #topnav h2 {
